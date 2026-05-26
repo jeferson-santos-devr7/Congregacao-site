@@ -1,0 +1,192 @@
+.contato {
+  padding: var(--section-gap) 24px;
+  background: var(--cream);
+}
+
+.contato-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contato-left h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--forest-dark);
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.contato-left h2 em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.contato-left > p {
+  color: var(--text-mid);
+  line-height: 1.85;
+  font-size: 0.97rem;
+  margin-bottom: 40px;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  display: block;
+  color: var(--forest-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  color: var(--text-light);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.contato-form-wrap {
+  background: white;
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 4px;
+  padding: 48px 44px;
+  box-shadow: 0 4px 32px rgba(44,95,63,0.06);
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(201,169,110,0.3);
+  background: var(--cream);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: white;
+}
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--forest-dark);
+  color: white;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+
+.form-submit:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(44,95,63,0.2);
+}
+
+.form-submit span { transition: transform 0.3s; }
+.form-submit:hover span { transform: translateX(4px); }
+
+.form-success {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.form-success h3 {
+  font-size: 1.8rem;
+  color: var(--forest-dark);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.btn-outline-dark {
+  padding: 12px 28px;
+  border: 1px solid var(--forest-dark);
+  background: none;
+  color: var(--forest-dark);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.btn-outline-dark:hover {
+  background: var(--forest-dark);
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .contato-inner { grid-template-columns: 1fr; gap: 48px; }
+  .contato-form-wrap { padding: 32px 24px; }
+}

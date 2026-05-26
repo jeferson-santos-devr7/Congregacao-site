@@ -1,0 +1,97 @@
+.tecnologias {
+  padding: var(--section-gap) 24px;
+  background: var(--cream);
+}
+
+.tec-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tec-header {
+  margin-bottom: 60px;
+}
+
+.tec-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--forest-dark);
+  line-height: 1.25;
+}
+
+.tec-header h2 em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.tec-intro {
+  color: var(--text-mid);
+  font-size: 1rem;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.tec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.tec-card {
+  background: white;
+  border: 1px solid rgba(201,169,110,0.15);
+  padding: 36px 32px;
+  border-radius: 4px;
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.tec-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--forest-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.tec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(44,95,63,0.12);
+}
+
+.tec-card:hover::after { transform: scaleX(1); }
+
+.tec-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.tec-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tec-card h3 {
+  font-size: 1.2rem;
+  color: var(--forest-dark);
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.tec-card p {
+  color: var(--text-mid);
+  line-height: 1.75;
+  font-size: 0.93rem;
+}
+
+@media (max-width: 640px) {
+  .tec-grid { grid-template-columns: 1fr; }
+}
